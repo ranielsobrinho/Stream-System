@@ -1,31 +1,36 @@
 package streamsistema.classesEntidades;
 
-public class tipo{
-    private static final int boleto=1;
-    private static final int cartao_cred=2;
-    private static final int cartao_deb=3;
-    private static final int pix=4;
-    private static final int ted=5;
+public class TipoPagamento{
+    private static final int BOLETO = 1;
+    private static final int CARTAO_CREDITO = 2;
+    private static final int CARTAO_DEBITO = 3;
+    private static final int PIX = 4;
+    private static final int TED = 5;
 
     //construtor
-    public tipo() {
+    public TipoPagamento() {
     }
 
     //getters
-    public static int getBoleto(){
-        return boleto;
+
+    public static int getBOLETO() {
+        return BOLETO;
     }
-    public static int getCartao_cred(){
-        return cartao_cred;
+
+    public static int getCARTAO_CREDITO() {
+        return CARTAO_CREDITO;
     }
-    public static int getCartao_deb(){
-        return cartao_deb;
+
+    public static int getCARTAO_DEBITO() {
+        return CARTAO_DEBITO;
     }
-    public static int getPix(){
-        return pix;
+
+    public static int getPIX() {
+        return PIX;
     }
-    public static int getTed(){
-        return ted;
+
+    public static int getTED() {
+        return TED;
     }
 
 }
