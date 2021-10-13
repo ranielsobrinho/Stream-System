@@ -24,6 +24,11 @@ public class Usuario {
     public Usuario(){
         
     }
+    
+    public Usuario(String cpf, String nome){
+        this.cpf = cpf;
+        this.nome = nome;
+    }   
 
     @Override
     public int hashCode() {
@@ -49,7 +54,9 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Pessoa{" + "cpf=" + cpf + ", nome=" + nome + ", dataNascimento=" + dataNascimento + '}';
+        return "Usuario{" + "cpf: " + cpf 
+                + "\nnome: " + nome 
+                + '}';
     }
     
     public String getCpf() {

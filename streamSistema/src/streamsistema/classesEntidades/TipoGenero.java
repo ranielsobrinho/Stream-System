@@ -6,19 +6,29 @@ package streamsistema.classesEntidades;
  */
 
 public class TipoGenero{
-    private String descricao;
+    private static final int ACAO_AVENTURA = 1;
+    private static final int COMEDIA = 2;
+    private static final int DRAMA = 3;
+    private static final int TERROR = 4;
 
     //Construtores
-    public TipoGenero(String descricao) {
-        this.descricao = descricao;
+    public TipoGenero() {
     }
 
-    public String getDescricao() {
-        return descricao;
+    public static int getACAO_AVENTURA() {
+        return ACAO_AVENTURA;
     }
 
-    public void setDescricao(String descricao){
-        this.descricao = descricao;
+    public static int getCOMEDIA() {
+        return COMEDIA;
+    }
+
+    public static int getDRAMA() {
+        return DRAMA;
+    }
+
+    public static int getTERROR() {
+        return TERROR;
     }
 
 }

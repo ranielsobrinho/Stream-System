@@ -5,20 +5,29 @@ package streamsistema.classesEntidades;
  * @author Raniel
  */
 
-public class TipoGenero{
-    private String descricao;
-
+public class TipoMidia{
+    private static final int DOCUMENTARIO = 1;
+    private static final int FILME = 2;
+    private static final int SERIE = 3;
+    private static final int DESENHO = 4;
     //Construtores
-    public TipoGenero(String descricao) {
-        this.descricao = descricao;
+    public TipoMidia() {
     }
 
-    public String getDescricao() {
-        return descricao;
+    public static int getDOCUMENTARIO() {
+        return DOCUMENTARIO;
     }
 
-    public void setDescricao(String descricao){
-        this.descricao = descricao;
+    public static int getFILME() {
+        return FILME;
+    }
+
+    public static int getSERIE() {
+        return SERIE;
+    }
+
+    public static int getDESENHO() {
+        return DESENHO;
     }
 
 }

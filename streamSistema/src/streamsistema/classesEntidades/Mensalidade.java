@@ -1,21 +1,23 @@
 package streamsistema.classesEntidades;
 
 import java.util.Date;
+import java.util.Objects;
 /**
  *
  * @author Anizio
  */
 public class Mensalidade {
-   private String codMensalidade;
+   private String codigo;
    private Integer Status;
    private Date dataVencimento;
    private Double valor;
    private Double multa;
    private Double juros;
-
+   private Integer idPagamento;
+   private Usuario usuario;
 
     //Construtores
-   public  Mensalidade(){
+   public  Mensalidade(String codi){
 
     }
 
@@ -26,10 +28,52 @@ public class Mensalidade {
         this.juros = juros;
     }
 
-    //Getters
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 59 * hash + Objects.hashCode(this.codigo);
+        return hash;
+    }
 
-    public String getCodMensalidade() {
-        return codMensalidade;
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Mensalidade other = (Mensalidade) obj;
+        return Objects.equals(this.codigo, other.codigo);
+    }
+
+    @Override
+    public String toString() {
+        return "Mensalidade{" + "dataVencimento=" + dataVencimento + ", valor=" + valor + ", multa=" + multa + ", juros=" + juros + '}';
+    }   
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }    
+    
+    public Integer getIdPagamento() {
+        return idPagamento;
+    }
+
+    //Getters
+    public void setIdPagamento(Integer idPagamento) {
+        this.idPagamento = idPagamento;
+    }
+
+    public String getCodigo() {
+        return codigo;
     }
 
     public Integer getStatus() {
@@ -53,8 +97,8 @@ public class Mensalidade {
     }
     //Seters
 
-    public void setCodMensalidade(String codMensalidade) {
-        this.codMensalidade = codMensalidade;
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 
     public void setStatus(Integer Status) {
